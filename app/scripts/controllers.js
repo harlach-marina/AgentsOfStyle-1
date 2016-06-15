@@ -7,13 +7,13 @@
  * # MainCtrl
  * Controller of the agentsOfStyleApp
  */
-angular.module('shopper.controllers')
-  .controller('mainCtrl', function () {
+angular.module('shopper.controllers', [])
+  .controller('mainCtrl', function ($scope) {
     
   })
 
-  .controller('homeCtrl', function () {
-    
+  .controller('homeCtrl', function ($scope) {
+    $scope.phrase = 'Hello page';   
   })
 
   .controller('stylistCtrl', function () {

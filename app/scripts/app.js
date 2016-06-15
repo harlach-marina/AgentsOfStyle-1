@@ -9,7 +9,9 @@
  * Main module of the application.
  */
 angular
-  .module('agentsOfStyleApp', ['ionic'])
+  .module('agentsOfStyleApp', [
+    'ionic',
+    'shopper.controllers'])
 
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
@@ -18,7 +20,7 @@ angular
     url: '/app',
     abstract: true,
     templateUrl: 'views/main.html',
-    //controller: 'mainCtrl'
+    controller: 'mainCtrl'
   })
 
   .state('app.home', {
@@ -26,7 +28,7 @@ angular
     views: {
       'menuContent': {
         templateUrl: 'views/home.html',
-        //controller: 'homeCtrl'
+        controller: 'homeCtrl'
       }
     }
   })
@@ -36,7 +38,7 @@ angular
       views: {
         'menuContent': {
           templateUrl: 'views/stylist.html',
-          //controller: 'stylistCtrl'
+          controller: 'stylistCtrl'
         }
       }
     })
@@ -45,7 +47,7 @@ angular
       views: {
         'menuContent': {
           templateUrl: 'views/outfits.html',
-          //controller: 'outfitsCtrl'
+          controller: 'outfitsCtrl'
         }
       }
     })
@@ -55,7 +57,7 @@ angular
       views: {
         'menuContent': {
           templateUrl: 'views/account.html',
-          //controller: 'outfitsCtrl'
+          controller: 'accountCtrl'
         }
       }
     });
