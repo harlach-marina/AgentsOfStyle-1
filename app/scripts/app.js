@@ -9,22 +9,56 @@
  * Main module of the application.
  */
 angular
-  .module('agentsOfStyleApp', ['ionic']);
-var PhoneGapInit = function () {
-  this.boot = function () {
-    angular.bootstrap(document, ['agentsOfStyleApp']);
-  };
+  .module('agentsOfStyleApp', ['ionic'])
 
-  if (window.phonegap !== undefined) {
-    document.addEventListener('deviceready', function() {
-      this.boot();
+.config(function($stateProvider, $urlRouterProvider) {
+  $stateProvider
+
+    .state('app', {
+    url: '/app',
+    abstract: true,
+    templateUrl: 'views/main.html',
+    //controller: 'mainCtrl'
+  })
+
+  .state('app.home', {
+    url: '/home',
+    views: {
+      'menuContent': {
+        templateUrl: 'views/home.html',
+        //controller: 'homeCtrl'
+      }
+    }
+  })
+
+  .state('app.stylist', {
+      url: '/stylist',
+      views: {
+        'menuContent': {
+          templateUrl: 'views/stylist.html',
+          //controller: 'stylistCtrl'
+        }
+      }
+    })
+    .state('app.outfits', {
+      url: '/outfits',
+      views: {
+        'menuContent': {
+          templateUrl: 'views/outfits.html',
+          //controller: 'outfitsCtrl'
+        }
+      }
+    })
+
+    .state('app.account', {
+      url: '/account',
+      views: {
+        'menuContent': {
+          templateUrl: 'views/account.html',
+          //controller: 'outfitsCtrl'
+        }
+      }
     });
-  } else {
-    console.log('PhoneGap not found, booting Angular manually');
-    this.boot();
-  }
-};
-
-angular.element(document).ready(function() {
-  new PhoneGapInit();
+  // if none of the above states are matched, use this as the fallback
+  $urlRouterProvider.otherwise('/app/home');
 });
