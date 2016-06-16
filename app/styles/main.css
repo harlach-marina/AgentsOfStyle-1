@@ -98,10 +98,29 @@ ion-content {
 .item.item-assertive{
   background-color: #f36969 ;
 }
-.item-assertive div {
+/*ПОМЕНЯЛА*/
+ion-side-menus ion-side-menu .item-assertive div {
   padding: 15px 0;
 }
-.item {
+ion-side-menus ion-side-menu .item {
+  border: none;
+}
+ion-side-menus ion-side-menu .item:last-of-type {
+  border-bottom: 1px solid #fff;
+}
+ion-side-menus ion-side-menu .item:first-of-type {
+  border-top: 1px solid #fff;
+}
+ion-side-menus ion-side-menu .item-complex .item-content {
+  padding: 0 0 0 16px;
+}
+ion-side-menus ion-side-menu .item-complex.item-assertive > .item-content.active, .item-complex.item-assertive > .item-content:active {
+  background-color: #f9e9e8;
+  color: #888;
+}
+/*ПОМЕНЯЛА*/
+
+/*.item {
   border: none;
 }
 .item:last-of-type {
@@ -116,7 +135,7 @@ ion-content {
 .item-complex.item-assertive > .item-content.active, .item-complex.item-assertive > .item-content:active {
   background-color: #f9e9e8;
   color: #888;
-}
+}*/
 .side-menu-text {
   text-transform: uppercase;
 }

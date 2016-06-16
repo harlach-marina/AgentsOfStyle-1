@@ -1,0 +1,36 @@
+
+ion-view[title="About"] .list .item:not(.item-divider) div:first-child {
+	text-transform: capitalize;
+	color: #000;
+}
+ion-view[title="About"] .list .item div:first-child {
+	float: left;
+}
+ion-view[title="About"] .list .item div:last-child {
+	float: right;
+}
+ion-view[title="About"] .list .item img {
+	width: 70%;
+  	height: auto;
+}
+@media(min-width: 800px){
+	ion-view[title="About"] .list .item img {
+		width: 15%;
+	}
+}
+.images {
+	overflow-x: scroll;
+}
+.text-uppercase,
+.text-uppercase button {
+  text-transform: uppercase;
+}
+ion-view[title="About"] .list .item-divider button{
+	background-color: transparent;
+	color: #fff;
+	border: 1px solid #fff;
+}
+ion-view[title="About"] .list .item.item-divider,
+ion-view[title="About"] .list .item.item-divider div {
+	color: #fff;
+}

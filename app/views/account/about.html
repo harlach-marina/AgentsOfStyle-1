@@ -1,5 +1,41 @@
 <ion-view title="{{title}}">
-  <ion-content>
-    <h1>{{title}}</h1>
+  <ion-content ng-repeat="user in users">
+    <div class="list">
+		  <div class="item item-divider assertive-bg text-uppercase">
+		  	personal info
+		  </div>
+	  	<div class="item"><div>first name</div> <div>{{user.name}}</div></div>
+		  <div class="item"><div>second name</div> <div>{{user.secondname}}</div></div>
+		  <div class="item"><div>e-mail</div> <div>{{user.email}}</div></div>
+		  <div class="item"><div>date of birth</div> <div>{{user.date}}</div></div>
+		  <div class="item"><div>age</div> <div>{{user.age}}</div></div>
+		  <div class="item"><div>phone number</div> <div>{{user.phone}}</div></div>
+	  
+		</div>
+		<div class="list">
+			<div class="item item-divider assertive-bg text-uppercase">
+		  	style preferences
+		  </div>
+		  <div class="item">{{user.prefer}}</div>
+		  <div class="item item-divider assertive-bg text-uppercase">
+		  	photos
+		  </div>
+		  <div class="item images">
+		  	<img src="./images/cd6ba1427c74ef6aad92b857536d91d6.png">
+		  	<img src="./images/1f8613771b91625d32f2b45c0e750482.jpg">
+		  </div>
+		  <div class="item item-divider assertive-bg text-uppercase">
+		  	<div class="">sizes</div>
+		  	<div><button ng-click="">
+				  edit
+				</button></div>
+		  </div>
+	  	<div class="item"><div>height</div> <div>{{user.height}}</div> <!-- <div><input type="text" placeholder={{user.height}}></div> --></div>
+	  	<div class="item"><div>weight</div> <div>{{user.weight}}</div></div>
+	  	<div class="item"><div>hip size</div> <div>{{user.hip}}</div></div>
+	  	<div class="item"><div>waist size</div> <div>{{user.waist}}</div></div>
+	  	<div class="item"><div>head size</div> <div>{{user.head}}</div></div>
+	  	<div class="item"><div>bra size</div> <div>{{user.bra}}</div></div>
+		</div>
   </ion-content>
 </ion-view>

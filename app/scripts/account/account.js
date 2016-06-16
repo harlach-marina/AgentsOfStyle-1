@@ -53,7 +53,22 @@ $stateProvider
  	$scope.title = "Budget"; 	  
 })
 .controller('aboutCtrl', function ($scope) {
-	$scope.title = "About";	     
+	$scope.title = "About";	 
+  $scope.users = [{
+    name: "Jane",
+    secondname: "Jackson",
+    email: "jj@icloud.ccom",
+    date: "3/28/1984",
+    age: 32,
+    phone: "0031 (0) 45 750 720 8",
+    height: 170,
+    weight: 55,
+    hip: 90,
+    waist: 60,
+    head: 50,
+    bra: 89,
+    prefer: "urban, casual"
+  }];    
 })
 .controller('deliveryCtrl', function ($scope) {
  	$scope.title = "Delivery";   
