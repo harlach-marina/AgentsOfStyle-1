@@ -8,12 +8,13 @@
  * Controller of the agentsOfStyleApp
  */
 angular.module('shopper.controllers', [])
+
   .controller('mainCtrl', function ($scope) {
     
   })
 
   .controller('homeCtrl', function ($scope) {
-    $scope.phrase = 'Hello page';   
+    $scope.phrase = 'Home';   
   })
 
   .controller('stylistCtrl', function () {
@@ -21,9 +22,5 @@ angular.module('shopper.controllers', [])
   })
 
   .controller('outfitsCtrl', function () {
-    
-  })
-
-  .controller('accountCtrl', function () {
     
   });

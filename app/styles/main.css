@@ -95,7 +95,7 @@ ion-content {
 .assertive-bg, 
 .item-complex.item-assertive > .item-content, 
 .bar.bar-assertive,
-.item.item-assertive {
+.item.item-assertive{
   background-color: #f36969 ;
 }
 .item-assertive div {
@@ -126,4 +126,16 @@ hr{
   height: 1px;
   border-top: 0;
   background-color: #fff;
+}
+
+.tab-item{
+  text-transform: uppercase;
+  border-right: 1px solid #e3e3e3;
+  color: #8d8d8d;
+}
+.tab-item.active, .tabs-striped.tabs-color-assertive .tab-item.active {
+  color: #f36969;
+}
+.tabs-striped.tabs-color-assertive .tab-item, .tabs-color-assertive .tab-item{
+  color: #8d8d8d;
 }

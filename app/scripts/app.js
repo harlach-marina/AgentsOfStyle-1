@@ -11,12 +11,13 @@
 angular
   .module('agentsOfStyleApp', [
     'ionic',
+    'accountModule',
     'shopper.controllers'])
 
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
-    .state('app', {
+  .state('app', {
     url: '/app',
     abstract: true,
     templateUrl: 'views/main.html',
