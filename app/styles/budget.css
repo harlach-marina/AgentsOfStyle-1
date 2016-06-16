@@ -1,0 +1,32 @@
+.range input{
+	background-size: 99% 10px;
+	background-image: linear-gradient(to right, #f36969 0%, #f36969 100%);
+}
+
+.checkbox input, .checkbox-icon{
+	border: 2px solid #f36969;
+    border-radius: 8px;
+}
+
+.checkbox input:before, .checkbox-icon:before{
+	border-radius: 8px;
+	border-width: 2px;
+}
+
+.checkbox-assertive input:before, .checkbox-assertive .checkbox-icon:before{
+	border-color: #fff;
+}
+
+.checkbox-assertive input:checked:before, .checkbox-assertive input:checked + .checkbox-icon:before {
+    background: #f36969;
+    border-color: #fff;
+}
+
+.checkbox input:after, .checkbox-icon:after{
+	border: 1px solid #f36969;
+}
+
+.list-center{
+	width: 70%;
+	margin: 0 auto;
+}

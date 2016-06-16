@@ -89,6 +89,9 @@ ion-content {
   border: none;
   background-image: none;
 }
+.bar.bar-assertive.bar-footer{
+  background-image: none;
+}
 .menu-content {
   box-shadow: none;
 }
@@ -96,7 +99,8 @@ ion-content {
 .item-complex.item-assertive > .item-content, 
 .bar.bar-assertive,
 .item.item-assertive{
-  background-color: #f36969 ;
+  background-color: #f36969;
+  border-color: #f36969;
 }
 .item-assertive div {
   padding: 15px 0;
@@ -117,7 +121,7 @@ ion-content {
   background-color: #f9e9e8;
   color: #888;
 }
-.side-menu-text {
+.text-uppercase {
   text-transform: uppercase;
 }
 hr{

@@ -1,12 +1,41 @@
 <ion-view title="{{title}}">
-  <ion-content padding="true">
-    <h1>{{title}}</h1>
-    <!-- <div class="list">
-	  	<div class="item range range-positive">
-		    <i class="icon ion-ios-sunny-outline"></i>
-		    <input type="range" name="volume" ng-model="budget" min="0" max="1111">
-		    <i class="icon ion-ios-sunny"></i>
-	  	</div>
-	</div> -->
-  </ion-content>
+  	<ion-content>
+	    <div style="width: 100%;font-family:'Open Sans';font-weight: 700;text-align='center'">
+	    	<span style="margin: 0 auto; width: 150px; display: block;font-size: 3em;"><i class="icon ion-social-euro"></i>{{' '+ budget}}</span>
+	    </div>
+	    <div class="list">
+		  	<div class="item range">
+			    <input type="range" name="volume" ng-model="budget" min="150" max="2500" ng-value="{{budget}}">
+		  	</div>
+		</div>
+		<ul class="list list-center">
+			<li class="item item-checkbox checkbox-assertive text-uppercase">
+			   special occasion
+			   <label class="checkbox">
+			   <input name="budgetFrequency" type="radio" checked>
+			   </label>
+			</li>
+			<li class="item item-checkbox checkbox-assertive text-uppercase">
+			   monthly
+			   <label class="checkbox">
+			   <input name="budgetFrequency" type="radio">
+			   </label>
+			</li>
+			<li class="item item-checkbox checkbox-assertive text-uppercase">
+			   quarterly
+			   <label class="checkbox">
+			   <input name="budgetFrequency" type="radio">
+			   </label>
+			</li>
+			<li class="item item-checkbox checkbox-assertive text-uppercase">
+			   yearly
+			   <label class="checkbox">
+			   <input name="budgetFrequency" type="radio">
+			   </label>
+			</li>
+		</ul>
+  	</ion-content>
+  	<div ng-click="updatePage" class="bar bar-footer bar-assertive text-uppercase text-uppercase">
+	  <div class="title">Save</div>
+	</div>
 </ion-view>
