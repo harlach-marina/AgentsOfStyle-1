@@ -1,44 +1,50 @@
 'use strict';
 
 angular.
-	module('accountModule', [])
+	module('accountModule', ['ionic'])
 
 .config(function($stateProvider, $urlRouterProvider) {
 $stateProvider
   .state('app.account.balance', {
     url: '/balance',
-    templateUrl: 'views/account/balance.html',
-    controller: 'balanceCtrl'
+    views: {
+      'balance-tab': {
+        templateUrl: 'views/account/balance.html',
+        controller: 'balanceCtrl'
+      }
+    }
   })
   .state('app.account.budget', {
     url: '/budget',
-    templateUrl: 'views/account/budget.html',
-    controller: 'budgetCtrl'
+    views: {
+      'budget-tab': {
+        templateUrl: 'views/account/budget.html',
+        controller: 'budgetCtrl'
+      }
+    }
   })
   .state('app.account.about', {
     url: '/about',
-    templateUrl: 'views/account/about.html',
-    controller: 'aboutCtrl'
+    views: {
+      'about-tab': {
+        templateUrl: 'views/account/about.html',
+        controller: 'aboutCtrl'
+      }
+    }
   })
   .state('app.account.delivery', {
     url: '/delivery',
-    templateUrl: 'views/account/delivery.html',
-    controller: 'deliveryCtrl'
+    views: {
+      'delivery-tab': {
+        templateUrl: 'views/account/delivery.html',
+        controller: 'deliveryCtrl'
+      }
+    }
   });
   $urlRouterProvider.otherwise('app/account/balance');
 })
 
-.controller('accountCtrl', function ($scope) {
-	$scope.tabs = [
-		{name : "balance", icon : "ion-social-usd"},
-		{name : "budget", icon : "ion-android-sunny"},
-		{name : "about", icon : "ion-android-person"},
-		{name : "delivery", icon : "ion-android-car"}
-	];
-	$scope.selectedIndex = 0;
-	$scope.changeTab = function(index){
-		$scope.selectedIndex = index;
-	}	   
+.controller('accountCtrl', function ($scope, $ionicTabsDelegate) {	   
 })
 .controller('balanceCtrl', function ($scope) {
 	$scope.title = "Balance"; 	   
