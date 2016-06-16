@@ -7,8 +7,8 @@
 
 body {
   padding: 0;
+  color: #636363;
 }
-
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
@@ -82,6 +82,13 @@ body {
   }
 }
 /*-----------------------------------------------------------------------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  color: #636363;
+}
+header.title {
+  text-align: center;
+}
 ion-content {
   margin-top: 40px!important;
 }
@@ -89,14 +96,26 @@ ion-content {
   border: none;
   background-image: none;
 }
+.bar.bar-footer {
+  padding: 0;
+}
+.bar.bar-footer .button-bar .button:first-of-type {
+  border-right: 1px solid #fff;
+}
 .menu-content {
   box-shadow: none;
 }
 .assertive-bg, 
 .item-complex.item-assertive > .item-content, 
 .bar.bar-assertive,
-.item.item-assertive {
+.item.item-assertive,
+.button-bar .button-assertive,
+.button.button-assertive.activated {
   background-color: #f36969 ;
+  color: #fff;
+}
+.bar-footer .button-bar .button {
+  font-size: 1.4em;
 }
 .item-assertive div {
   padding: 15px 0;
@@ -113,11 +132,12 @@ ion-content {
 .item-complex .item-content {
   padding: 0 0 0 16px;
 }
-.item-complex.item-assertive > .item-content.active, .item-complex.item-assertive > .item-content:active {
+.item-complex.item-assertive > .item-content.active, .item-complex.item-assertive > .item-content:active
+ {
   background-color: #f9e9e8;
   color: #888;
 }
-.side-menu-text {
+.text-uppercase {
   text-transform: uppercase;
 }
 hr{
