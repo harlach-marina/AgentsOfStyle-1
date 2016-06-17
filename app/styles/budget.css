@@ -1,6 +1,33 @@
+.budget-wrapper{
+	width: 100%;
+	margin-top: 10px;
+	padding-bottom: 2px;
+}
+
+.budget-header{
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+	font-size: 1.5em;
+	color: #e3e3e3;
+	font-weight: 100;
+	line-height: 20px;
+}
+
+.budget-header.money-text{
+	font-size: 3em;
+	font-weight: 600;
+	color: black;
+	
+}
+
 .range input{
-	background-size: 99% 10px;
+	background-size: 100% 10px;
 	background-image: linear-gradient(to right, #f36969 0%, #f36969 100%);
+}
+
+.range.range-assertive input::-webkit-slider-thumb:before {
+	background: #f36969;
 }
 
 .checkbox input, .checkbox-icon{
@@ -23,10 +50,38 @@
 }
 
 .checkbox input:after, .checkbox-icon:after{
-	border: 1px solid #f36969;
+	border: none;
 }
-
 .list-center{
 	width: 70%;
 	margin: 0 auto;
+}
+
+.list-center li{
+	margin: 0 auto;
+}
+.button.button-full{
+	margin: 0;
+}
+
+.button.button-assertive{
+	background-color: #f36969;
+	font-size: 18px;	
+}
+
+.button.button-assertive.active, .button.button-assertive.activated {
+    border-color: #f36969;
+    background-color: #f36969;
+}
+
+@media only screen and (min-width : 480px){
+	.list-center li{
+		width: 70%;
+	}
+}
+
+@media only screen and (min-width : 640px){
+	.list-center li{
+		width: 50%;
+	}
 }

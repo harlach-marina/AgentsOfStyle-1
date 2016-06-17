@@ -1,41 +1,45 @@
-<ion-view title="{{title}}">
+<ion-view>
   	<ion-content>
-	    <div style="width: 100%;font-family:'Open Sans';font-weight: 700;text-align='center'">
-	    	<span style="margin: 0 auto; width: 150px; display: block;font-size: 3em;"><i class="icon ion-social-euro"></i>{{' '+ budget}}</span>
+	    <div class="budget-wrapper">
+	    		<div class="budget-header money-text">
+	    			<i class="icon ion-social-euro"></i>{{' '+ shopper.budget}}
+	    		</div>
+	    		<div class="budget-header text-uppercase">per month</div>
 	    </div>
-	    <div class="list">
-		  	<div class="item range">
-			    <input type="range" name="volume" ng-model="budget" min="150" max="2500" ng-value="{{budget}}">
-		  	</div>
-		</div>
+	    
+	  	<div class="item range range-assertive">
+		    <input type="range" name="volume" ng-model="shopper.budget" min="150" max="2500" step="25" ng-value="{{budget}}">
+	  	</div>
 		<ul class="list list-center">
 			<li class="item item-checkbox checkbox-assertive text-uppercase">
 			   special occasion
 			   <label class="checkbox">
-			   <input name="budgetFrequency" type="radio" checked>
+			   <input ng-model="shopper.budgetFrequency" value="special occasion" type="radio" checked>
 			   </label>
 			</li>
 			<li class="item item-checkbox checkbox-assertive text-uppercase">
 			   monthly
 			   <label class="checkbox">
-			   <input name="budgetFrequency" type="radio">
+			   <input ng-model="shopper.budgetFrequency" value="monthly" type="radio">
 			   </label>
 			</li>
 			<li class="item item-checkbox checkbox-assertive text-uppercase">
 			   quarterly
 			   <label class="checkbox">
-			   <input name="budgetFrequency" type="radio">
+			   <input ng-model="shopper.budgetFrequency" value="quarterly" type="radio">
 			   </label>
 			</li>
 			<li class="item item-checkbox checkbox-assertive text-uppercase">
 			   yearly
 			   <label class="checkbox">
-			   <input name="budgetFrequency" type="radio">
+			   <input ng-model="shopper.budgetFrequency" value="yearly" type="radio">
 			   </label>
 			</li>
 		</ul>
   	</ion-content>
-  	<div ng-click="updatePage" class="bar bar-footer bar-assertive text-uppercase text-uppercase">
-	  <div class="title">Save</div>
-	</div>
+  	<ion-footer-bar ng-click="saveData()" class="bar-assertive">
+  		<button class="button button-full button-assertive text-uppercase">
+		  save
+		</button>
+  	</ion-footer-bar>
 </ion-view>

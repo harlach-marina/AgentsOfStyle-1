@@ -82,9 +82,6 @@ body {
   }
 }
 /*-----------------------------------------------------------------------------------------------------------------------*/
-ion-content {
-  margin-top: 40px!important;
-}
 .bar.bar-assertive {
   border: none;
   background-image: none;
@@ -142,4 +139,15 @@ hr{
 }
 .tabs-striped.tabs-color-assertive .tab-item, .tabs-color-assertive .tab-item{
   color: #8d8d8d;
+}
+
+.bar.bar-assertive .title {
+    color: #fff;
+    height: 70px;
+    top: 12%;
+}
+
+.avatar{
+  width: 70px;
+  height: 70px;
 }

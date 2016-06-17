@@ -61,6 +61,26 @@ angular
           controller: 'accountCtrl'
         }
       }
+    })
+
+    .state('app.new-outfit', {
+      url: '/new-outfit',
+      views: {
+        'menuContent': {
+          templateUrl: 'views/new-outfit.html',
+          //controller: 'new-outfitCtrl'
+        }
+      }
+    })
+
+    .state('app.change-stylist', {
+      url: '/change-stylist',
+      views: {
+        'menuContent': {
+          templateUrl: 'views/change-stylist.html',
+          //controller: 'outfitsCtrl'
+        }
+      }
     });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/home');

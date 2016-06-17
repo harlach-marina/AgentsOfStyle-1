@@ -50,8 +50,16 @@ $stateProvider
 	$scope.title = "Balance"; 	   
 })
 .controller('budgetCtrl', function ($scope) {
- 	$scope.title = "Budget";
-  $scope.budget = 0; 	  
+ 	$scope.title = "Budget"; 	  
+
+  $scope.shopper = {
+    budget : 150,
+    budgetFrequency : 'special occasion'
+  };
+
+  $scope.saveData = function(){
+    console.log(JSON.stringify($scope.shopper, null, 2));
+  }
 })
 .controller('aboutCtrl', function ($scope) {
 	$scope.title = "About";	     
