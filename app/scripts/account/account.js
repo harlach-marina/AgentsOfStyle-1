@@ -66,9 +66,17 @@ $stateProvider
     hip: 90,
     waist: 60,
     head: 50,
-    bra: 89,
-    prefer: "urban, casual"
-  }];    
+    bra: 89
+  }];
+  $scope.show = function (){
+    angular.element( document.querySelector('.append')).append('<img style="margin: 0 2px;" src="./images/212ba73869110c104d612b64a3f86c35.png">');
+  }; 
+  // $scope.button_clicked = false;
+  //   $scope.do_something = function() {
+  //       alert("Clicked!");
+  //       $scope.button_clicked = true;
+  //       return false;
+  //   };   
 })
 .controller('deliveryCtrl', function ($scope) {
  	$scope.title = "Delivery";   

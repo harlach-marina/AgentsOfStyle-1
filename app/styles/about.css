@@ -9,13 +9,41 @@ ion-view[title="About"] .list .item div:first-child {
 ion-view[title="About"] .list .item div:last-child {
 	float: right;
 }
-ion-view[title="About"] .list .item img {
+ion-view[title="About"] .list .item.style-img img {
 	width: 70%;
   	height: auto;
 }
+ion-view[title="About"] .list .item input {
+	width: 60px;
+	background-color: #fff;
+	box-shadow: inset 1px 2px 20px 1px rgba(84, 79, 79, 0.1);
+	text-align: center;
+	
+}
+ion-view[title="About"] .list .item input::-webkit-input-placeholder {
+	color: #000;
+}
+ion-view[title="About"] .list .item input:focus {
+	/*box-shadow: 0 0 8px rgba(255, 70, 70, .6);*/
+	border: 1px solid #f36969;
+}
+ion-view[title="About"] .list .item input:disabled {
+	width: 30px;
+	box-shadow: none;
+	background-color: transparent;
+}
 @media(min-width: 800px){
-	ion-view[title="About"] .list .item img {
+	ion-view[title="About"] .list .item.style-img img {
 		width: 15%;
+	}
+}
+ion-view[title="About"] .list .item.photos-img img {
+	width: 40%;
+  	height: auto;
+}
+@media(min-width: 800px){
+	ion-view[title="About"] .list .item.photos-img img {
+		width: 10%;
 	}
 }
 .images {
