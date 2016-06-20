@@ -99,6 +99,11 @@ ion-content {
   background-color: #f36969 ;
 }
 /*ПОМЕНЯЛА*/
+div.reg {
+  height: 100%;
+  background-image: url('../images/2951192b6a0cc00fb23e81a4e8e6e8c7.jpg'); 
+  background-size: cover;
+}
 ion-side-menus ion-side-menu .item-assertive div {
   padding: 15px 0;
 }

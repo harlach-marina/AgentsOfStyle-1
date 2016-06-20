@@ -1,48 +1,48 @@
 
-ion-view[title="About"] .list .item:not(.item-divider) div:first-child {
+ion-view[view-title="Account"] .list .item:not(.item-divider) div:first-child {
 	text-transform: capitalize;
 	color: #000;
 }
-ion-view[title="About"] .list .item div:first-child {
+ion-view[view-title="Account"] .list .item div:first-child {
 	float: left;
 }
-ion-view[title="About"] .list .item div:last-child {
+ion-view[view-title="Account"] .list .item div:last-child {
 	float: right;
 }
-ion-view[title="About"] .list .item.style-img img {
+ion-view[view-title="Account"] .list .item.style-img img {
 	width: 70%;
   	height: auto;
 }
-ion-view[title="About"] .list .item input {
+ion-view[view-title="Account"] .list .item input {
 	width: 60px;
 	background-color: #fff;
 	box-shadow: inset 1px 2px 20px 1px rgba(84, 79, 79, 0.1);
 	text-align: center;
 	
 }
-ion-view[title="About"] .list .item input::-webkit-input-placeholder {
+ion-view[view-title="Account"] .list .item input::-webkit-input-placeholder {
 	color: #000;
 }
-ion-view[title="About"] .list .item input:focus {
+ion-view[view-title="Account"] .list .item input:focus {
 	/*box-shadow: 0 0 8px rgba(255, 70, 70, .6);*/
 	border: 1px solid #f36969;
 }
-ion-view[title="About"] .list .item input:disabled {
+ion-view[view-title="Account"] .list .item input:disabled {
 	width: 30px;
 	box-shadow: none;
 	background-color: transparent;
 }
 @media(min-width: 800px){
-	ion-view[title="About"] .list .item.style-img img {
+	ion-view[view-title="Account"] .list .item.style-img img {
 		width: 15%;
 	}
 }
-ion-view[title="About"] .list .item.photos-img img {
+ion-view[view-title="Account"] .list .item.photos-img img {
 	width: 40%;
   	height: auto;
 }
 @media(min-width: 800px){
-	ion-view[title="About"] .list .item.photos-img img {
+	ion-view[view-title="Account"] .list .item.photos-img img {
 		width: 10%;
 	}
 }
@@ -53,12 +53,12 @@ ion-view[title="About"] .list .item.photos-img img {
 .text-uppercase button {
   text-transform: uppercase;
 }
-ion-view[title="About"] .list .item-divider button{
+ion-view[view-title="Account"] .list .item-divider button{
 	background-color: transparent;
 	color: #fff;
 	border: 1px solid #fff;
 }
-ion-view[title="About"] .list .item.item-divider,
-ion-view[title="About"] .list .item.item-divider div {
+ion-view[view-title="Account"] .list .item.item-divider,
+ion-view[view-title="Account"] .list .item.item-divider div {
 	color: #fff;
 }
