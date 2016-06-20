@@ -12,7 +12,8 @@ angular
   .module('agentsOfStyleApp', [
     'ionic',
     'accountModule',
-    'shopper.controllers'])
+    'shopper.controllers',
+    'newVisitors'])
 
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
@@ -23,7 +24,21 @@ angular
     templateUrl: 'views/main.html',
     controller: 'mainCtrl'
   })
-
+  // .state('registration', {
+  //   url: '/registration',
+  //   abstract: true,
+  //   templateUrl: 'views/registration.html',
+  //   controller: 'registrationCtrl'
+  // })
+  // .state('registration.question01', {
+  //   url: '/question01',
+  //   views: {
+  //     'registrationContent': {
+  //       templateUrl: 'views/question01.html',
+  //       controller: 'questionsCtrl'
+  //     }
+  //   }
+  // });
   .state('app.home', {
     url: '/home',
     views: {
@@ -52,33 +67,12 @@ angular
         }
       }
     })
-
     .state('app.account', {
       url: '/account',
       views: {
         'menuContent': {
           templateUrl: 'views/account.html',
           controller: 'accountCtrl'
-        }
-      }
-    })
-
-    .state('app.new-outfit', {
-      url: '/new-outfit',
-      views: {
-        'menuContent': {
-          templateUrl: 'views/new-outfit.html',
-          //controller: 'new-outfitCtrl'
-        }
-      }
-    })
-
-    .state('app.change-stylist', {
-      url: '/change-stylist',
-      views: {
-        'menuContent': {
-          templateUrl: 'views/change-stylist.html',
-          //controller: 'outfitsCtrl'
         }
       }
     });
