@@ -136,7 +136,7 @@ hr{
   background-color: #fff;
 }
 
-.tab-item{
+.tab-item, .tab-item.active {
   border-right: 1px solid #e3e3e3;
   color: #8d8d8d;
 }
@@ -153,4 +153,20 @@ hr{
 }
 ion-tabs.tabs-striped .tab-title {
   text-transform: uppercase;
+}
+.bar .title {
+  height: 71px;
+}
+.tabs-top > .tabs, .tabs.tabs-top {
+  top: 71px;
+}
+ion-side-menu-content ion-content.has-header {
+  top: 71px;
+}
+ion-side-menu-content ion-content.has-header.has-tabs-top {
+  top: 120px;
+}
+ion-side-menu-content .tabs-striped .tab-item-active,
+ion-side-menu-content .tabs-striped .tab-item.activated {
+  border-bottom: none!important;
 }
