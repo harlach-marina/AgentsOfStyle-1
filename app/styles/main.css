@@ -151,3 +151,6 @@ hr{
   width: 70px;
   height: 70px;
 }
+ion-tabs.tabs-striped .tab-title {
+  text-transform: uppercase;
+}
