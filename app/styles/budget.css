@@ -20,39 +20,39 @@
 	color: black;
 }
 
-.range{
+.ns-budget .range{
 	padding-bottom: 0px;
 }
 
-.range input{
+.ns-budget .range input{
 	background-size: 100% 10px;
 	background-image: linear-gradient(to right, #f36969 0%, #f36969 100%);
 }
 
-.range.range-assertive input::-webkit-slider-thumb:before {
+.ns-budget .range.range-assertive input::-webkit-slider-thumb:before {
 	background: #f36969;
 }
 
-.checkbox input, .checkbox-icon{
+.ns-budget .checkbox input, .ns-budget .checkbox-icon{
 	border: 2px solid #f36969;
     border-radius: 8px;
 }
 
-.checkbox input:before, .checkbox-icon:before{
+.ns-budget .checkbox input:before, .ns-budget .checkbox-icon:before{
 	border-radius: 8px;
 	border-width: 2px;
 }
 
-.checkbox-assertive input:before, .checkbox-assertive .checkbox-icon:before{
+.ns-budget .checkbox-assertive input:before, .ns-budget .checkbox-assertive .checkbox-icon:before{
 	border-color: #fff;
 }
 
-.checkbox-assertive input:checked:before, .checkbox-assertive input:checked + .checkbox-icon:before {
+.ns-budget .checkbox-assertive input:checked:before, .ns-budget .checkbox-assertive input:checked + .ns-budget .checkbox-icon:before {
     background: #f36969;
     border-color: #fff;
 }
 
-.checkbox input:after, .checkbox-icon:after{
+.ns-budget .checkbox input:after, .checkbox-icon:after{
 	border: none;
 }
 .list-center{
@@ -63,16 +63,16 @@
 .list-center li{
 	margin: 0 auto;
 }
-.button.button-full{
+.bar-assertive .button.button-full{
 	margin: 0;
 }
 
-.button.button-assertive{
+.bar-assertive .button.button-assertive{
 	background-color: #f36969;
 	font-size: 18px;	
 }
 
-.button.button-assertive.active, .button.button-assertive.activated {
+.ns-budget .button.button-assertive.active, .ns-budget .button.button-assertive.activated {
     border-color: #f36969;
     background-color: #f36969;
 }
@@ -86,9 +86,13 @@
     flex: 0 0 100%;
     max-width: 100%;
 }
-.col{
+.ns-budget .col{
 	padding: 0px 25px;
 	margin-top: -4px;
+}
+
+.ns-budget .item{
+	border-style: none;
 }
 
 .col-100 span{
@@ -115,7 +119,7 @@
 		font-size: 2em;
 	}
 
-	.col{
+	.ns-budget .col{
 		margin-top: 0px;	
 	}
 }
