@@ -11,10 +11,10 @@
           <div class="col">Budget</div>
           <div class="col">Expences</div>
         </div>
-        <div class="row" ng-repeat="budget in users.budget"  ng-repeat="expense in users.expenses">
-          <div class="col">{{}}</div>
-          <div class="col">&euro;{{budget}}</div>
-          <div class="col">&euro;{{expense}}</div>
+        <div class="row" ng-repeat="mon in users.money">
+          <div class="col">{{mon.regDate | date:'MMM'}}</div>
+          <div class="col">&euro;{{mon.budget}}</div>
+          <div class="col">&euro;{{mon.expenses}}</div>
         </div>
 	  </div>
   </ion-content>

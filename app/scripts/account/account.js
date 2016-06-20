@@ -48,26 +48,44 @@ $stateProvider
 })
 .controller('balanceCtrl', function ($scope) {
 	$scope.title = "Balance";
+      function randomDate(start, end) {
+      return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+    }
+
+    // var fromDate = randomDate(new Date(2016, 0, 1), new Date(2016, 6, 6));
+
+
   $scope.users = {
     balance: 232,
-    expenses: [1, 22, 10],
-    budget: [76, 777, 80]
+
+    money: [{
+      expenses: 1,
+      budget: 76,
+      regDate: randomDate(new Date(2016, 0, 1), new Date(2016, 6, 6))
+    },
+    {
+      expenses: 22,
+      budget: 777,
+      regDate: randomDate(new Date(2016, 0, 1), new Date(2016, 6, 6))
+    },
+    {
+      expenses: 10,
+      budget: 80,
+      regDate: randomDate(new Date(2016, 0, 1), new Date(2016, 6, 6))
+    },
+    {
+      expenses: 160,
+      budget: 380,
+      regDate: randomDate(new Date(2016, 0, 1), new Date(2016, 6, 6))
+    },
+    {
+      expenses: 710,
+      budget: 8000,
+      regDate: randomDate(new Date(2016, 0, 1), new Date(2016, 6, 6))
+    }],
+    // expenses: [1, 22, 10],
+    // budget: [76, 777, 80]
   }; 
-
-  // function getNewArr(){
-  //   return oldArr.map(function(item,index){
-  //       item.full_name = [item.first_name,item.last_name].join(" ");
-  //       return item;
-  //   });
-  // var oldArr = [{first_name:"Colin",last_name:"Toh"},{first_name:"Addy",last_name:"Osmani"},{first_name:"Yehuda",last_name:"Katz"}];
-
-  // function getNewArr(){
-        
-  //   return oldArr.map(function(item,index){
-  //       item.full_name = [item.first_name,item.last_name].join(" ");
-  //       return item;
-  //   });
-    
 })
 .controller('budgetCtrl', function ($scope) {
  	$scope.title = "Budget"; 	  

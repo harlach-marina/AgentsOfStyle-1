@@ -170,3 +170,11 @@ ion-side-menu-content .tabs-striped .tab-item-active,
 ion-side-menu-content .tabs-striped .tab-item.activated {
   border-bottom: none!important;
 }
+ion-side-menu ion-list .list {
+  padding-top: 50px;
+}
+ion-side-menu ion-list:last-of-type .list {
+  position: absolute;
+  width: 100%;
+  bottom: 30px;
+}

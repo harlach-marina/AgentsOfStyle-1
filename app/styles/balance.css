@@ -1,5 +1,6 @@
 .mh-balance .h2{
 	color: #8d8d8d;
+	padding: 5px 0;
 }
 .mh-balance .h2 span{
 	color: #000;
@@ -11,8 +12,12 @@
 .mh-balance .mh-table {
 	padding: 0;
 }
+
 .mh-balance .mh-table .row:nth-of-type(even) {
-	background-color: #ececec;
+	background-color: #f7f7f7;
+}
+.mh-balance .mh-table .row {
+	padding: 20px;
 }
 .mh-balance .mh-table .row.header{
 	padding: 0;
