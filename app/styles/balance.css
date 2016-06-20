@@ -1,3 +1,22 @@
-.mh-balance h1 span{
+.mh-balance .h2{
 	color: #8d8d8d;
+}
+.mh-balance .h2 span{
+	color: #000;
+}
+.mh-balance .list .item.item-divider,
+.mh-balance .list .item.item-divider div {
+	color: #fff;
+}
+.mh-balance .mh-table {
+	padding: 0;
+}
+.mh-balance .mh-table .row:nth-of-type(even) {
+	background-color: #ececec;
+}
+.mh-balance .mh-table .row.header{
+	padding: 0;
+	background-color: #8d8d8d;
+	color: #fff;
+	margin: 0;
 }
