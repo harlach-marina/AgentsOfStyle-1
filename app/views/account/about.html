@@ -34,9 +34,14 @@
 
 		  <div class="item item-divider assertive-bg text-uppercase">
 		  	<div>sizes</div>
-		  	<div><button ng-click="editable()">
-				  edit<input type="checkbox" ng-model="edit">
-				</button></div>
+		  	<div>
+		  		<button ng-click="editable()" ng-show="!edit" ng-model="edit">
+				  edit
+				</button>
+				<button ng-click="editable()" ng-show="edit" ng-model="edit">
+				  save
+				</button>
+			</div>
 		  </div>
 		  <div class="item"><div>height</div> <div><input type="text" ng-disabled="!edit" placeholder="{{user.height}}"></div></div>
 	  	<div class="item"><div>weight</div> <div><input type="text" ng-disabled="!edit" placeholder="{{user.weight}}"></div></div>

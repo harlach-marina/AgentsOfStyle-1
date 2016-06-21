@@ -52,7 +52,7 @@ $stateProvider
       return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
     }
 
-    // var fromDate = randomDate(new Date(2016, 0, 1), new Date(2016, 6, 6));
+    var fromDate = randomDate(new Date(2016, 0, 1), new Date(2016, 6, 6));
 
 
   $scope.users = {
@@ -61,27 +61,27 @@ $stateProvider
     money: [{
       expenses: 1,
       budget: 76,
-      regDate: randomDate(new Date(2016, 0, 1), new Date(2016, 6, 6))
+      regDate: fromDate
     },
     {
       expenses: 22,
       budget: 777,
-      regDate: randomDate(new Date(2016, 0, 1), new Date(2016, 6, 6))
+      regDate: new Date(fromDate).setMonth(fromDate.getMonth()+1)
     },
     {
       expenses: 10,
       budget: 80,
-      regDate: randomDate(new Date(2016, 0, 1), new Date(2016, 6, 6))
+      regDate: new Date(fromDate).setMonth(fromDate.getMonth()+2)
     },
     {
       expenses: 160,
       budget: 380,
-      regDate: randomDate(new Date(2016, 0, 1), new Date(2016, 6, 6))
+      regDate: new Date(fromDate).setMonth(fromDate.getMonth()+3)
     },
     {
       expenses: 710,
       budget: 8000,
-      regDate: randomDate(new Date(2016, 0, 1), new Date(2016, 6, 6))
+      regDate: new Date(fromDate).setMonth(fromDate.getMonth()+4)
     }],
     // expenses: [1, 22, 10],
     // budget: [76, 777, 80]
@@ -118,11 +118,12 @@ $stateProvider
   $scope.show = function() {
     angular.element( document.querySelector('.append')).append('<img style="margin: 0 2px;" src="./images/212ba73869110c104d612b64a3f86c35.png">');
   };
-  $scope.tg = false;
+  $scope.editButtonVal = "Edit";
+  $scope.edit = false;
   $scope.editable = function() {
-    $scope.tg = !$scope.tg;
-    $scope.tr = true;
-    console.log($scope.tg);
+    $scope.edit = !$scope.edit;
+    $scope.editButtonVal = "Save";
+    return false;
   } 
   // $scope.button_clicked = false;
   //   $scope.do_something = function() {
