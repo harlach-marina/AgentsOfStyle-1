@@ -1,52 +1,50 @@
-<ion-view>  
-  <ion-side-menus>
-    <ion-side-menu-content edge-drag-threshold="50">
-      <ion-nav-bar class="bar-assertive">
-        <ion-nav-title>
-          <img class="avatar" src="images/avatar.png">
-        </ion-nav-title>
-        <ion-nav-back-button>
-        </ion-nav-back-button>
-        <ion-nav-buttons side="right">
-          <button class="button icon-right ion-navicon-round button-clear" menu-toggle="right"></button>
-        </ion-nav-buttons>
-      </ion-nav-bar>
-      <ion-nav-view name="menuContent"></ion-nav-view>
-    </ion-side-menu-content>
+<ion-side-menus>
+  <ion-side-menu-content edge-drag-threshold="50">
+    <ion-nav-bar class="bar-assertive">
+      <ion-nav-title>
+        <img class="avatar" src="images/avatar.png">
+      </ion-nav-title>
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+      <ion-nav-buttons side="right">
+        <button class="button icon-right ion-navicon-round button-clear" menu-toggle="right"></button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
 
-    <ion-side-menu class="assertive-bg text-uppercase" side="right">
-      <ion-header-bar align-title="left" class="bar-assertive">
-        <h1 class="title"></h1>
-        <div class="buttons">
-          <a class="button icon-right ion-android-exit button-clear" href="#/app/login"></a>
-        </div>
-      </ion-header-bar>
+  <ion-side-menu class="assertive-bg text-uppercase" side="right">
+    <ion-header-bar align-title="left" class="bar-assertive">
+      <h1 class="title"></h1>
+      <div class="buttons">
+        <a class="button icon-right ion-android-exit button-clear" href="#/app/login"></a>
+      </div>
+    </ion-header-bar>
 
-      <ion-content scroll="false" class="text-center text-uppercase">
-        <ion-list>
-          <ion-item class="item-assertive" menu-close href="#/app/user/shopper-home">
-            <div>home</div><hr>
-          </ion-item>
-          <ion-item class="item-assertive" menu-close href="#/app/user/shopper-stylist">
-            <div>my stylist</div><hr>
-          </ion-item>
-          <ion-item class="item-assertive" menu-close href="#/app/user/shopper-outfits">
-            <div>my outfits</div><hr>
-          </ion-item>
-          <ion-item class="item-assertive" menu-close href="#/app/user/shopper-account/balance">
-            <div>account</div>
-          </ion-item>
-        </ion-list>
+    <ion-content scroll="false" class="text-center text-uppercase">
+      <ion-list>
+        <ion-item class="item-assertive" menu-close href="#/app/user/shopper-home">
+          <div>home</div><hr>
+        </ion-item>
+        <ion-item class="item-assertive" menu-close href="#/app/user/shopper-stylist">
+          <div>my stylist</div><hr>
+        </ion-item>
+        <ion-item class="item-assertive" menu-close href="#/app/user/shopper-outfits">
+          <div>my outfits</div><hr>
+        </ion-item>
+        <ion-item class="item-assertive" menu-close href="#/app/user/shopper-account/balance">
+          <div>account</div>
+        </ion-item>
+      </ion-list>
 
-        <ion-list>
-          <ion-item class="item-assertive" menu-close href="#/app/user/shopper-new-outfit">
-            <div>request a new outfit</div><hr>
-          </ion-item>
-          <ion-item class="item-assertive" menu-close href="#/app/user/shopper-change-stylist">
-            <div>change my stylist</div>
-          </ion-item>
-        </ion-list>
-      </ion-content>
-    </ion-side-menu>
-  </ion-side-menus>
-</ion-view> 
+      <ion-list>
+        <ion-item class="item-assertive" menu-close href="#/app/user/shopper-new-outfit">
+          <div>request a new outfit</div><hr>
+        </ion-item>
+        <ion-item class="item-assertive" menu-close href="#/app/user/shopper-change-stylist">
+          <div>change my stylist</div>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>
