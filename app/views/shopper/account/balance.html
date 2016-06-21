@@ -1,7 +1,7 @@
 <ion-view>
   <ion-content class="mh-balance">
-    <div class="h2">{{title}}: <span>&euro;{{users.balance}}</span></div>
-     <div class="list">
+    <div class="head"><div class="h2">{{title}}: <span>&euro;{{users.balance}}</span></div><div class="h5"><a href="">ask money back</a></div></div>
+    <div class="list">
 		  <div class="item item-divider assertive-bg text-uppercase">
 		  	budget vs expenses
 		  </div>
@@ -11,10 +11,10 @@
           <div class="col">Budget</div>
           <div class="col">Expences</div>
         </div>
-        <div class="row" ng-repeat="budget in users.budget"  ng-repeat="expense in users.expenses">
-          <div class="col">{{}}</div>
-          <div class="col">&euro;{{budget}}</div>
-          <div class="col">&euro;{{expense}}</div>
+        <div class="row" ng-repeat="mon in users.money">
+          <div class="col">{{mon.regDate | date:'MMM'}}</div>
+          <div class="col">&euro;{{mon.budget}}</div>
+          <div class="col">&euro;{{mon.expenses}}</div>
         </div>
 	  </div>
   </ion-content>
