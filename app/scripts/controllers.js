@@ -13,14 +13,22 @@ angular.module('shopper.controllers', [])
     
   })
 
-  .controller('homeCtrl', function ($scope) {
+  .controller('shopperHomeCtrl', function ($scope) {
     $scope.phrase = 'Home';   
   })
 
-  .controller('stylistCtrl', function () {
+  .controller('shopperStylistCtrl', function () {
     
   })
 
-  .controller('outfitsCtrl', function () {
+  .controller('shopperOutfitsCtrl', function () {
+    
+  })
+
+  .controller('shopperNewOutfitCtrl', function () {
+    
+  })
+
+  .controller('shopperChangeStylistCtrl', function () {
     
   });

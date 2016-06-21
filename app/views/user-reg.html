@@ -1,0 +1,13 @@
+<ion-view>
+	<ion-nav-bar class="bar-assertive">
+		<ion-nav-back-button ng-click="showPrevQuestion()">
+	    </ion-nav-back-button>
+	</ion-nav-bar>
+	<ion-nav-view name="questions"></ion-nav-view>
+	<ion-footer-bar class="bar-assertive">
+		<div class="button-bar">
+		  <a class="button button-assertive" ng-click="refuse()" ng-href="#/app/sign-up-user/{{'question' + currentQuestion}}">No</a>
+		  <a class="button button-assertive" ng-click="accept()" ng-href="#/app/sign-up-user/{{'question' + currentQuestion}}">Yes</a>
+		</div>
+	</ion-footer-bar>
+</ion-view>

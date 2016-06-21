@@ -5,46 +5,45 @@ angular.
 
 .config(function($stateProvider, $urlRouterProvider) {
 $stateProvider
-  .state('app.account.balance', {
+  .state('app.user.shopper-account.balance', {
     url: '/balance',
     views: {
       'balance-tab': {
-        templateUrl: 'views/account/balance.html',
+        templateUrl: 'views/shopper/account/balance.html',
         controller: 'balanceCtrl'
       }
     }
   })
-  .state('app.account.budget', {
+  .state('app.user.shopper-account.budget', {
     url: '/budget',
     views: {
       'budget-tab': {
-        templateUrl: 'views/account/budget.html',
+        templateUrl: 'views/shopper/account/budget.html',
         controller: 'budgetCtrl'
       }
     }
   })
-  .state('app.account.about', {
+  .state('app.user.shopper-account.about', {
     url: '/about',
     views: {
       'about-tab': {
-        templateUrl: 'views/account/about.html',
+        templateUrl: 'views/shopper/account/about.html',
         controller: 'aboutCtrl'
       }
     }
   })
-  .state('app.account.delivery', {
+  .state('app.user.shopper-account.delivery', {
     url: '/delivery',
     views: {
       'delivery-tab': {
-        templateUrl: 'views/account/delivery.html',
+        templateUrl: 'views/shopper/account/delivery.html',
         controller: 'deliveryCtrl'
       }
     }
   });
-  $urlRouterProvider.otherwise('app/account/balance');
 })
 
-.controller('accountCtrl', function ($scope, $ionicTabsDelegate) {	   
+.controller('shopperAccountCtrl', function ($scope, $ionicTabsDelegate) {	   
 })
 .controller('balanceCtrl', function ($scope) {
 	$scope.title = "Balance";

@@ -1,0 +1,21 @@
+<ion-view>
+  <ion-content class="mh-balance">
+    <div class="h2">{{title}}: <span>&euro;{{users.balance}}</span></div>
+     <div class="list">
+		  <div class="item item-divider assertive-bg text-uppercase">
+		  	budget vs expenses
+		  </div>
+	  	<div class="item mh-table">
+	  		<div class="row header">
+          <div class="col"></div>
+          <div class="col">Budget</div>
+          <div class="col">Expences</div>
+        </div>
+        <div class="row" ng-repeat="budget in users.budget"  ng-repeat="expense in users.expenses">
+          <div class="col">{{}}</div>
+          <div class="col">&euro;{{budget}}</div>
+          <div class="col">&euro;{{expense}}</div>
+        </div>
+	  </div>
+  </ion-content>
+</ion-view>

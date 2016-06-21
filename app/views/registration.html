@@ -1,1 +1,23 @@
-<ion-nav-view name="registrationContent"></ion-nav-view>
+<ion-view>
+	<ion-content>
+  		<ul class="list list-center">
+			<li class="item item-checkbox checkbox-assertive text-uppercase">
+			   a Stylist
+			   <label class="checkbox">
+			   		<input name="targets" value="stylist" type="radio" checked>
+			   </label>
+			</li>
+			<li class="item item-checkbox checkbox-assertive text-uppercase">
+			   New Clients
+			   <label class="checkbox">
+			   		<input name="targets" value="clients" type="radio">
+			   </label>
+			</li>
+		</ul>
+  	</ion-content>
+	<ion-footer-bar class="bar-assertive">
+		<button ng-click="startRegistration()" class="button button-full button-assertive text-uppercase" ng-click="">
+		  let`s start
+		</button>
+	</ion-footer-bar>
+</ion-view>
