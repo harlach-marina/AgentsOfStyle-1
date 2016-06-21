@@ -1,0 +1,6 @@
+.mh-delivery .list .item div:first-child {
+	float: left;
+}
+.mh-delivery .list .item div:last-child {
+	float: right;
+}
