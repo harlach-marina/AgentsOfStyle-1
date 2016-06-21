@@ -1,6 +1,6 @@
 'use strict';
 angular
-	.module('registration', ['ionic'])
+	.module('registration', ['ionic', 'ngAnimate'])
 
 	.config(function($stateProvider, $urlRouterProvider){
 		$stateProvider
@@ -65,15 +65,24 @@ angular
 		    }
 		})
 
+		.state('app.sign-up-user.question6', {
+		    url: '/question6',
+		    views: {
+		      'questions': {
+		        templateUrl: 'views/user-questions/question06.html',
+		        controller: 'registrationCtrl'
+		      }
+		    }
+		})
+
 	})
 	
 	.controller('registrationCtrl', function ($scope, $state, $ionicHistory) {
 	  	$scope.startRegistration = function(){
 	    	$state.go('app.sign-up-user.question1');
+	    	$scope.currentQuestion = 1;
 	  	}
-
 	  	$scope.currentQuestion = 1;
-
 	  	$scope.showPrevQuestion = function(){
 	  		$ionicHistory.goBack();
 	  		$scope.currentQuestion--;
@@ -88,4 +97,14 @@ angular
 	  		//Sending data
 	  		$scope.currentQuestion++;
 	  	}
+
+	  	//Question 5 - Budget 
+	  	$scope.displayHint = true;
+	  	$scope.closeHint = function(){
+	  		$scope.displayHint = false;
+	  	}
+	  	$scope.shopper = {
+		    budget : 150,
+		    budgetFrequency : 'special occasion'
+		};
 	});

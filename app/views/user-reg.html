@@ -5,9 +5,16 @@
 	</ion-nav-bar>
 	<ion-nav-view name="questions"></ion-nav-view>
 	<ion-footer-bar class="bar-assertive">
-		<div class="button-bar">
+		<div ng-show="currentQuestion < 5" class="button-bar text-uppercase">
 		  <a class="button button-assertive" ng-click="refuse()" ng-href="#/app/sign-up-user/{{'question' + currentQuestion}}">No</a>
 		  <a class="button button-assertive" ng-click="accept()" ng-href="#/app/sign-up-user/{{'question' + currentQuestion}}">Yes</a>
+		</div>
+		<div ng-show="currentQuestion == 5" class="button-bar text-uppercase">
+			<a class="button button-full button-assertive icon-right ion-chevron-right" ng-click="accept()" ng-href="#/app/sign-up-user/{{'question' + currentQuestion}}">next step</a>
+		</div>
+		<div ng-show="currentQuestion == 6" class="button-bar text-uppercase">
+		  <a class="button button-assertive text-uppercase">upload</a>
+		  <a class="button button-assertive" ng-click="accept()" ng-href="#/app/sign-up-user/{{'question' + currentQuestion}}">skip</a>
 		</div>
 	</ion-footer-bar>
 </ion-view>

@@ -1,0 +1,32 @@
+.question-text{
+	text-align: center;
+	font-size: 1.7em;
+	font-style: italic;
+	margin: 25px 0 23px 0;
+	font-weight: 100;
+}
+
+.hint-block{
+	text-align: center;
+	width: 224px;
+	background-color: #F5F5F5;
+	margin: 0 auto;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -25px;
+	border-radius: 8px;
+	font-weight: 100;
+	font-size: 1.3em;
+	padding: 5px 10px 10px;
+}
+
+.hint-block.ng-hide{
+	transition: 0.5s linear all;
+	opacity: 0;
+}
+
+.hint-block button{
+	display: block;
+	margin: auto;
+}

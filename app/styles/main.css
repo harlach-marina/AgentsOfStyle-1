@@ -95,7 +95,8 @@ body {
 .assertive-bg, 
 .item-complex.item-assertive > .item-content, 
 .bar.bar-assertive,
-.item.item-assertive{
+.item.item-assertive,
+.button.button-assertive{
   background-color: #f36969;
   border-color: #f36969;
 }
