@@ -1,0 +1,7 @@
+.mh-delivery-form label span.item {
+	margin: 10px auto;
+	width: 100%;
+	border: 1px solid #f36969;
+	padding: 5px;
+	display: inline-block;
+}

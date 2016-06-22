@@ -40,10 +40,41 @@ $stateProvider
         controller: 'deliveryCtrl'
       }
     }
+  })
+  .state('app.user.shopper-account.delivery-form', {
+    url: '/delivery-form',
+    views: {
+      'delivery-tab': {
+        templateUrl: 'views/shopper/account/delivery-form.html',
+        controller: 'deliveryCtrl'
+      }
+    }
   });
 })
 
-.controller('shopperAccountCtrl', function ($scope, $ionicTabsDelegate) {	   
+.controller('shopperAccountCtrl', function ($scope, $ionicTabsDelegate) {	
+  $scope.option = {
+    defaultDeliveryAddress: "home",
+    val: "home"
+  };
+  $scope.user = {
+    defaultHomeAddress: {
+      country: "Netherlands",
+      city: "Plein",
+      street: "3425",
+      house: "4",
+      postCode: "2235564"      
+    },
+    defaultWorkAddress: {
+      country: "Belarus",
+      city: "Minsk",
+      street: "Judro",
+      house: "145",
+      postCode: "2280056"      
+    },
+    homeAddress: "",
+    workAddress: ""
+  }; 
 })
 .controller('balanceCtrl', function ($scope) {
 	$scope.title = "Balance";
@@ -124,13 +155,25 @@ $stateProvider
     $scope.editButtonVal = "Save";
     return false;
   } 
-  // $scope.button_clicked = false;
-  //   $scope.do_something = function() {
-  //       alert("Clicked!");
-  //       $scope.button_clicked = true;
-  //       return false;
-  //   };   
 })
 .controller('deliveryCtrl', function ($scope) {
- 	$scope.title = "Delivery";   
+ 	$scope.title = "Delivery";
+     
+  $scope.hasHome = true;
+  $scope.hasWork = false;
+  $scope.setUserAddress = function(address){
+    return (address.country + ", " + address.city + ", " + address.street + ", " + address.house + ", " + address.postCode);
+  };
+  if ($scope.hasHome) {
+    $scope.user.homeAddress = $scope.setUserAddress($scope.user.defaultHomeAddress)
+  };
+  if ($scope.hasWork) {
+    $scope.user.workAddress = $scope.setUserAddress($scope.user.defaultWorkAddress)
+  };
+  $scope.chMe = function(string) {
+    $scope.option.val = string;
+  };
+  $scope.submitForm = function() {
+    console.log($scope.user.defaultHomeAddress.city);
+  }
 });

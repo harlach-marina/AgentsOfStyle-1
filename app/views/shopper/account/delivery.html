@@ -1,22 +1,31 @@
 <ion-view>
-  <ion-content class="mh-delivery">
+  <ion-content class="mh-delivery ns-budget">
     <div class="list">
 
-	  <a class="item item-icon-right" href="#">
-	    Home: {{user.homeAaddress}}
+	  <a class="item item-icon-right" ng-click="chMe('home')" href="#/app/user/shopper-account/delivery-form">
+	    Home: <br>{{user.homeAddress}}
 	    <i class="icon ion-ios-arrow-forward"></i>
 	  </a>
-	  <a class="item item-icon-right" href="#">
-	    Work: {{user.workAddress}}
+	  <a class="item item-icon-right" ng-click="chMe('work')" href="#/app/user/shopper-account/delivery-form">
+	    Work: <br>{{user.workAddress}}
 	    <i class="icon ion-ios-arrow-forward"></i>
 	  </a>
 	  <div class="item">
 	  	<div>Default address of delivery:</div>
-	   	<div>
-	   		<input type="radio" name="group2" value="Water">Work<br>
-			<input type="radio" name="group2" value="Beer">Home<br>
-	   	</div>
-
+	   	<div><ul>
+			<li class="item item-checkbox checkbox-assertive text-uppercase">
+			   home
+			   <label class="checkbox">
+			   <input ng-model="option.defaultDeliveryAddress" value="home" type="radio">
+			   </label>
+			</li>
+			<li class="item item-checkbox checkbox-assertive text-uppercase">
+			   work
+			   <label class="checkbox">
+			   <input ng-model="option.defaultDeliveryAddress" value="work" type="radio" >
+			   </label>
+			</li>
+		</ul></div>
 	  </div> 
 	</div>
   </ion-content>

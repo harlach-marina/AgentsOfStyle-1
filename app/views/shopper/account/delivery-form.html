@@ -1,0 +1,42 @@
+<ion-view class="mh-delivery-form">
+	<ion-content>
+			
+		
+		<div class="list list-inset">
+			<div class="text-uppercase">{{option.val}} address</div>
+			<div>Country: 
+				<span ng-if="hasHome && option.val=='home'">{{user.defaultHomeAddress.country}}</span>
+				<span ng-if="hasWork && option.val=='work'">{{user.defaultWorkAddress.country}}</span></div>
+				<form>
+					<label>
+				  Town/City
+				    <span class="item item-input"><input name="city" ng-model="form" type="text" ng-if="(!hasHome && option.val=='home')||(!hasWork && option.val=='work')" ng-pattern="/^[a-zA-Z\s]*$/" placeholder="Town/City">
+				    <input name="city" ng-model="user.defaultHomeAddress.city" type="text" ng-if="hasHome && option.val=='home'" placeholder="Town/City" ng-pattern="/^[a-zA-Z\s]*$/" value={{user.defaultHomeAddress.city}}>
+				    <input name="city" ng-model="user.defaultWorkAddress.city" type="text" ng-if="hasWork && option.val=='work'" placeholder="Town/City" ng-pattern="/^[a-zA-Z\s]*$/" value={{user.defaultWorkAddress.city}}></span>
+				  </label>
+				  <label>
+				  Street Name
+				    <span class="item item-input"><input name="street" type="text" ng-if="(!hasHome && option.val=='home')||(!hasWork && option.val=='work')" placeholder="Street Name">
+				    <input name="street" type="text" ng-if="hasHome && option.val=='home'" placeholder="Street Name" value={{user.defaultHomeAddress.street}}>
+				    <input name="street" type="text" ng-if="hasWork && option.val=='work'" placeholder="Street Name" value={{user.defaultWorkAddress.street}}></span>
+				  </label>
+				  <label>
+				  House number/Flat number
+				  	<span class="item item-input"><input name="house" type="text" ng-if="(!hasHome && option.val=='home')||(!hasWork && option.val=='work')" placeholder="House number/Flat number">
+				  	<input name="house" type="text" ng-if="hasHome && option.val=='home'" placeholder="House number/Flat number" value={{user.defaultHomeAddress.house}}>
+				  	<input name="house" type="text" ng-if="hasWork && option.val=='work'" placeholder="House number/Flat number" value={{user.defaultWorkAddress.house}}></span>
+				  </label>
+				  <label>
+				  Post code
+				  	<span class="item item-input"><input name="postcode" type="text" ng-if="(!hasHome && option.val=='home')||(!hasWork && option.val=='work')" placeholder="Post code">
+				  	<input name="postcode" type="text" ng-if="hasHome && option.val=='home'" placeholder="Post code" value={{user.defaultHomeAddress.postCode}}>
+				  	<input name="postcode" type="text" ng-if="hasWork && option.val=='work'" placeholder="Post code" value={{user.defaultWorkAddress.postCode}}></span>
+				  </label>
+			    <button class="button button-small" ng-click="submitForm()">
+			      Save
+			    </button>
+				</form>
+		 
+		</div>
+	</ion-content>
+</ion-view>

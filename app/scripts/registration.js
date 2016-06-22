@@ -70,10 +70,9 @@ angular
 	.controller('registrationCtrl', function ($scope, $state, $ionicHistory) {
 	  	$scope.startRegistration = function(){
 	    	$state.go('app.sign-up-user.question1');
+	    	$scope.currentQuestion = 1;
 	  	}
-
 	  	$scope.currentQuestion = 1;
-
 	  	$scope.showPrevQuestion = function(){
 	  		$ionicHistory.goBack();
 	  		$scope.currentQuestion--;
