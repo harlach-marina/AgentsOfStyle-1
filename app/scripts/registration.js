@@ -124,9 +124,11 @@ angular
 	  		var regState = ($scope.role.type == 'shopper') ? 'app.sign-up-shopper.question1' : 'app.sign-up-stylist.question1';
 	    	$state.go(regState);	
 	  	}
-	  	
+
 	  	$scope.currentQuestion = 1;
 	  	$scope.answers = {}
+
+	  	
 	  	$scope.showPrevQuestion = function(){
 	  		$ionicHistory.goBack();
 	  		$scope.currentQuestion--;
