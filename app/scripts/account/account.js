@@ -87,7 +87,6 @@ $stateProvider
   }; 
 })
 .controller('budgetCtrl', function ($scope) {
- 	$scope.title = "Budget"; 	  
 
   $scope.shopper = {
     budget : 150,

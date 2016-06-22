@@ -5,8 +5,8 @@ angular
 	.config(function($stateProvider, $urlRouterProvider){
 		$stateProvider
 
-		.state('app.sign-up-user', {
-		    url: '/sign-up-user',
+		.state('app.sign-up-shopper', {
+		    url: '/sign-up-shopper',
 		    views: {
 		      'content': {
 		        templateUrl: 'views/user-reg.html',
@@ -15,61 +15,101 @@ angular
 		    }
 		})
 
-		.state('app.sign-up-user.question1', {
+		.state('app.sign-up-shopper.question1', {
 		    url: '/question1',
 		    views: {
 		      'questions': {
-		        templateUrl: 'views/user-questions/question01.html',
+		        templateUrl: 'views/shopper-questions/question01.html',
 		        controller: 'registrationCtrl'
 		      }
 		    }
 		})
 
-		.state('app.sign-up-user.question2', {
+		.state('app.sign-up-shopper.question2', {
 		    url: '/question2',
 		    views: {
 		      'questions': {
-		        templateUrl: 'views/user-questions/question02.html',
+		        templateUrl: 'views/shopper-questions/question02.html',
 		        controller: 'registrationCtrl'
 		      }
 		    }
 		})
 
-		.state('app.sign-up-user.question3', {
+		.state('app.sign-up-shopper.question3', {
 		    url: '/question3',
 		    views: {
 		      'questions': {
-		        templateUrl: 'views/user-questions/question03.html',
+		        templateUrl: 'views/shopper-questions/question03.html',
 		        controller: 'registrationCtrl'
 		      }
 		    }
 		})
 
-		.state('app.sign-up-user.question4', {
+		.state('app.sign-up-shopper.question4', {
 		    url: '/question4',
 		    views: {
 		      'questions': {
-		        templateUrl: 'views/user-questions/question04.html',
+		        templateUrl: 'views/shopper-questions/question04.html',
 		        controller: 'registrationCtrl'
 		      }
 		    }
 		})
 
-		.state('app.sign-up-user.question5', {
+		.state('app.sign-up-shopper.question5', {
 		    url: '/question5',
 		    views: {
 		      'questions': {
-		        templateUrl: 'views/user-questions/question05.html',
+		        templateUrl: 'views/shopper-questions/question05.html',
 		        controller: 'registrationCtrl'
 		      }
 		    }
 		})
 
-		.state('app.sign-up-user.question6', {
+		.state('app.sign-up-shopper.question6', {
 		    url: '/question6',
 		    views: {
 		      'questions': {
-		        templateUrl: 'views/user-questions/question06.html',
+		        templateUrl: 'views/shopper-questions/question06.html',
+		        controller: 'registrationCtrl'
+		      }
+		    }
+		})
+
+		.state('app.sign-up-stylist', {
+		    url: '/sign-up-stylist',
+		    views: {
+		      'content': {
+		        templateUrl: 'views/user-reg.html',
+		        controller: 'registrationCtrl'
+		      }
+		    }
+		})
+
+		.state('app.sign-up-stylist.question1', {
+		    url: '/question1',
+		    views: {
+		      'questions': {
+		        templateUrl: 'views/stylist-questions/question01.html',
+		        controller: 'registrationCtrl'
+		      }
+		    }
+		})
+
+		.state('app.sign-up-stylist.question2', {
+		    url: '/question2',
+		    views: {
+		      'questions': {
+		        templateUrl: 'views/stylist-questions/question02.html',
+		        controller: 'registrationCtrl'
+		      }
+		    }
+		})
+
+		.state('app.sign-up-stylist.question3', {
+		    url: '/question3',
+		    views: {
+		      'questions': {
+		        templateUrl: 'views/stylist-questions/question03.html',
 		        controller: 'registrationCtrl'
 		      }
 		    }
@@ -79,10 +119,14 @@ angular
 	
 	.controller('registrationCtrl', function ($scope, $state, $ionicHistory) {
 	  	$scope.startRegistration = function(){
-	    	$state.go('app.sign-up-user.question1');
-	    	$scope.currentQuestion = 1;
+	  		console.log($scope.currentQuestion);
+	  		$scope.currentQuestion = 1;
+	  		var regState = ($scope.role.type == 'shopper') ? 'app.sign-up-shopper.question1' : 'app.sign-up-stylist.question1';
+	    	$state.go(regState);	
 	  	}
+	  	
 	  	$scope.currentQuestion = 1;
+	  	$scope.answers = {}
 	  	$scope.showPrevQuestion = function(){
 	  		$ionicHistory.goBack();
 	  		$scope.currentQuestion--;
@@ -90,12 +134,16 @@ angular
 
 	  	$scope.accept = function(){
 	  		//Sending data
+	  		$scope.answers['question' + $scope.currentQuestion] = true;
 	  		$scope.currentQuestion++;
+	  		console.log($scope.answers);
 	  	}
 
 	  	$scope.refuse = function(){
 	  		//Sending data
+	  		$scope.answers['question' + $scope.currentQuestion] = false;
 	  		$scope.currentQuestion++;
+	  		console.log($scope.answers);
 	  	}
 
 	  	//Question 5 - Budget 

@@ -126,7 +126,27 @@ angular
 })
 
 .controller('appCtrl', function ($scope, $state) {
+  $scope.role = {
+    type : "shopper"
+  }
+
   $scope.startApp = function(){
     $state.go('app.login');
   }  
+});
+
+var PhoneGapInit = function () {
+  if (window.cordova !== undefined) {
+    document.addEventListener('deviceready', function() {
+      angular.bootstrap(document, ['agentsOfStyleApp']);
+      console.log('Cordova works fine');
+    });
+  } else {
+    console.log('PhoneGap not found, booting Angular manually');
+    angular.bootstrap(document, ['agentsOfStyleApp']);
+  }
+};
+
+angular.element(document).ready(function() {
+  new PhoneGapInit();
 });

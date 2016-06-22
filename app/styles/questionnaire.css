@@ -30,3 +30,7 @@
 	display: block;
 	margin: auto;
 }
+
+.questionnaire .range input{
+	margin: 5px 10px;
+}

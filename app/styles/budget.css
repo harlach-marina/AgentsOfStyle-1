@@ -27,6 +27,7 @@
 .ns-budget .range input{
 	background-size: 100% 10px;
 	background-image: linear-gradient(to right, #f36969 0%, #f36969 100%);
+	margin: 0px 10px;
 }
 
 .ns-budget .range.range-assertive input::-webkit-slider-thumb:before {
@@ -106,7 +107,7 @@
 @media only screen and (min-width : 320px){
 	.list-center li{
 		width: 75%;
-		padding: 14px 14px 14px 60px;	
+		padding: 14px 14px 10px 60px;	
 	}
 }
 

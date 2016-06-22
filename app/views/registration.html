@@ -1,16 +1,17 @@
 <ion-view>
 	<ion-content>
+		<h1>{{role.type}}</h1>
   		<ul class="list list-center">
 			<li class="item item-checkbox checkbox-assertive text-uppercase">
 			   a Stylist
 			   <label class="checkbox">
-			   		<input name="targets" value="stylist" type="radio" checked>
+			   		<input ng-model="role.type" value="shopper" type="radio" checked>
 			   </label>
 			</li>
 			<li class="item item-checkbox checkbox-assertive text-uppercase">
 			   New Clients
 			   <label class="checkbox">
-			   		<input name="targets" value="clients" type="radio">
+			   		<input ng-model="role.type" value="stylist" type="radio">
 			   </label>
 			</li>
 		</ul>

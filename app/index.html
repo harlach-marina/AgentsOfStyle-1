@@ -19,8 +19,8 @@
     <link rel="stylesheet" href="styles/questionnaire.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="agentsOfStyleApp">
-    <div class="container">
+  <body>
+    <div class="container" ng-controller="appCtrl">
       <ion-nav-view></ion-nav-view>
     </div>
      <script>
@@ -33,8 +33,9 @@
        ga('send', 'pageview');
     </script>
 
+    
+    <script src="cordova.js"></script>
     <!-- build:js(.) scripts/vendor.js -->
-    <script src="phonegap.js"></script>
     <!-- bower:js -->
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
@@ -46,6 +47,7 @@
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers.js"></script>
         <script src="scripts/registration.js"></script>
